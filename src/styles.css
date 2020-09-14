@@ -1,0 +1,31 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0;  }
+@font-face {font-family: "Daxline W05 Black";
+src: url("./font/5973d5f292af706f058b2e8b909f7944.eot"); /* IE9*/
+src: url("./font/5973d5f292af706f058b2e8b909f7944.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+url("./font/5973d5f292af706f058b2e8b909f7944.woff2") format("woff2"), /* chrome、firefox */
+url("./font/5973d5f292af706f058b2e8b909f7944.woff") format("woff"), /* chrome、firefox */
+url("./font/5973d5f292af706f058b2e8b909f7944.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+url("./font/5973d5f292af706f058b2e8b909f7944.svg#Daxline W05 Black") format("svg"); /* iOS 4.1- */
+}
+.container{
+	padding-top: 20px
+}
+
+.title{
+	font-size: 60px;
+	font-family:"Daxline W05 Black"!important;
+}
+.subtitle{
+	font-size: 25px;	
+	;font-family:"Daxline W05 Regular"
+}
+.m-top{
+	margin-top: 16px;
+}
+.img-div img{
+	object-fit: cover!important;
+	height:300px!important;
+}

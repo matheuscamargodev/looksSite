@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-sm-7">
+        <angular-image-slider class="slider" [images]="produto.arr_imagens"></angular-image-slider>
+        <div class="title_resultado">Descricao do item</div>
+        <div class="descricao"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+            has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+            type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+            leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+            software like Aldus PageMaker including versions of Lorem Ipsum. </div>
+    </div>
+
+    <div class="col-sm-5 text-center">
+        <div class="box_pay">
+
+
+            <div class="nome_produto">{{produto.nome}}</div><br>
+            <div>R$ 250,00</div>
+            <div>
+                <span *ngIf="!produto.notaCalculada"><img class="nota" src="assets/icones/0.png"></span>
+                <span *ngIf="produto.notaCalculada >= 1 && produto.notaCalculada < 2"><img class="nota"
+                        src="assets/icones/1.png"></span>
+                <span *ngIf="produto.notaCalculada >= 2 && produto.notaCalculada < 3"><img class="nota"
+                        src="assets/icones/2.png"></span>
+                <span *ngIf="produto.notaCalculada >= 3 && produto.notaCalculada < 4"><img class="nota"
+                        src="assets/icones/3.png"></span>
+                <span *ngIf="produto.notaCalculada >= 4 && produto.notaCalculada < 5"><img class="nota"
+                        src="assets/icones/4.png"></span>
+                <span *ngIf="produto.notaCalculada >= 5"><img class="nota" src="assets/icones/5.png"></span>
+            </div>
+
+            <div> <button class="button_detalhes" mat-flat-button>Comprar</button></div>
+
+        </div>
+    </div>>
+
+</div>

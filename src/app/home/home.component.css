@@ -1,0 +1,73 @@
+.filtro{
+	border-top: solid 1px #9E9E9E;
+	border-bottom: solid 1px #9E9E9E;
+	padding-top: 11px;
+	padding-bottom: 11px;
+}
+
+.filtro span{
+	margin-left: 20px
+}
+
+.image{
+
+	object-fit: cover!important;
+
+}
+
+.nota{
+	margin-left: -6px;
+	width: 120px;
+}
+
+mat-icon{
+	font-size: 16px!important;
+	text-align: center;
+}
+.footer{
+	position: absolute;
+	bottom: -40px;
+	width: 100%;
+}
+.button_detalhes{
+	width: 100%;
+	margin-left: 13px;
+	margin-right: 13px;
+	background: #107F92!important;
+	color: white
+}
+.cr{
+	position: relative;
+}
+
+.indisponivel{
+	color:red;
+}
+.disponivel{
+	color:green;
+}
+
+.select{
+	padding: 0px;
+	margin: -25px;
+	width: 100%
+}
+.title_resultado{
+	font-size: 25px;
+	margin-top:20px;
+	font-family:"Daxline W05 Black"!important;
+
+}
+.produto_nome{
+	font-size: 18px;
+	font-weight: 600;
+}
+.imagens{
+	width: 250px!important;
+	max-width: 250px!important;
+	height: 200px!important;
+	max-height: 200px!important;
+	object-fit: cover
+}
+
+.x-top{margin-top: 65px!important}

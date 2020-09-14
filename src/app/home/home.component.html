@@ -1,0 +1,82 @@
+<div class="container m-top">
+	<div class="row filtro">
+		<div class="col-sm-3">Filtrar por:
+			<span>
+				<mat-checkbox (change)="filtrar()" [(ngModel)]="filtro.disponivel" class="example-margin">Disponivel
+				</mat-checkbox>
+			</span>
+
+		</div>
+		<div class="col-sm-2">
+			<mat-form-field class="select" floatLabel="never">
+				<mat-label>Preco</mat-label>
+				<mat-select [(ngModel)]="filtro.preco" (selectionChange)="filtrar()">
+					<mat-option [value]="null">Todos</mat-option>
+					<mat-option *ngFor="let preco of precos" [value]="preco.id">{{preco.valor}}</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
+		<div class="col-sm-2">
+			<mat-form-field class="select" floatLabel="never">
+				<mat-label>Categorias</mat-label>
+				<mat-select [(ngModel)]="filtro.categoria" (selectionChange)="filtrar()">
+					<mat-option [value]="null">Todos</mat-option>
+					<mat-option *ngFor="let categoria of categorias" [value]="categoria.title">{{categoria.title}}
+					</mat-option>
+
+				</mat-select>
+			</mat-form-field>
+		</div>
+		<div class="col-sm-2">
+		</div>
+		<div class="col-sm-2">
+			<button (click)="resetar()" mat-stroked-button>Limpar</button>
+		</div>
+	</div>
+
+
+	<div class="title_resultado">Resultados</div>
+
+	<div class="m-top">
+		<div class="row">
+			<div class="col-sm-3 x-top cr" *ngFor="let produto of produtos">
+				<div *ngIf="produto.nome">
+					<div><img class="imagens" src="{{produto.imagem_destacada[0].thumbImage}}"></div>
+					<div class="produto_nome">{{produto.nome}}</div>
+					<div class="row">
+						<div class="col-sm-6">
+							<span *ngIf="!produto.notaCalculada"><img class="nota" src="assets/icones/0.png"></span>
+							<span *ngIf="produto.notaCalculada >= 1 && produto.notaCalculada < 2"><img class="nota" src="assets/icones/1.png"></span>
+							<span *ngIf="produto.notaCalculada >= 2 && produto.notaCalculada < 3"><img class="nota" src="assets/icones/2.png"></span>
+							<span *ngIf="produto.notaCalculada >= 3 && produto.notaCalculada < 4"><img class="nota" src="assets/icones/3.png"></span>
+							<span *ngIf="produto.notaCalculada >= 4 && produto.notaCalculada < 5"><img class="nota" src="assets/icones/4.png"></span>
+							<span *ngIf="produto.notaCalculada >= 5"><img class="nota" src="assets/icones/5.png"></span>
+						</div>
+						<div class="col-sm-6">
+							- <span *ngFor="let icon of arrayOne(produto.precoMedio)">$</span>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6 text-left">
+							{{produto.categoria}}
+						</div>
+
+						<div class="col-sm-6 text-right">
+							<span *ngIf="produto.disponivel">
+								<mat-icon class="disponivel">check_circle</mat-icon>Disponivel
+							</span>
+							<span *ngIf="!produto.disponivel">
+								<mat-icon class="indisponivel">remove_circle</mat-icon>Indisponivel
+							</span>
+						</div>
+					</div>
+					<div class="row text-center footer">
+						<button (click)="verDetalhes(produto)" class="button_detalhes" mat-flat-button>Detalhes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div>
